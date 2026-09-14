@@ -14,7 +14,7 @@ jobs:
       - name: ⚙️ 設定 Node.js 環境
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: 🚀 執行檢查器腳本
         run: node checker.js
