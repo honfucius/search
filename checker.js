@@ -1,4 +1,4 @@
-// checker.js
+//  checker.js
 const fs = require('fs');
 
 const CONFIG = {
