@@ -1,4 +1,3 @@
-// checker.js
 const CONFIG = {
   minLen: 1,
   maxLen: 3, 
@@ -44,11 +43,9 @@ async function startChecker() {
         const exists = await checkName(name);
         doneCount++;
         
-        // 簡化進度輸出，每 500 個印一次，避免雲端 Log 爆炸
         if (doneCount % 500 === 0) {
           console.log(`⏱️ 目前已檢查: ${doneCount} 個...`);
         }
-
         if (exists) {
           console.log(`✅ [發現] https://${name}.netlify.app/`);
         }
@@ -57,7 +54,6 @@ async function startChecker() {
         next();
       }
     };
-
     for (let i = 0; i < CONFIG.concurrency; i++) next();
   });
 }
