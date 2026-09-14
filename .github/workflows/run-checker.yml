@@ -19,9 +19,9 @@ jobs:
       - name: 🚀 執行檢查器腳本
         run: node checker.js
 
-      - name: 📦 上傳 HTML 結果報告
+      - name: 📦 保存單一 HTML 結果報告
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: netlify-scan-result
-          path: report.html
+          name: netlify-report-html
+          path: index.html
